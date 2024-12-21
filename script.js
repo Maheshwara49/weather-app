@@ -5,14 +5,14 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
-    const APIKey = 'c04eb8a50e1ad0572e855e356ceffc63'; // Make sure this is your actual API key
+    const APIKey = 'Your API key'; 
     const city = document.querySelector('.search-box input').value;
 
     if (city === '') {
         return;
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`)
+    fetch('your url from the email`)
         .then(response => response.json())
         .then(json => {
             if (json.cod !== 200) {
